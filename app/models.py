@@ -9,3 +9,4 @@ class Device(Base):
     name = Column(String, unique=True, index=True)
     type = Column(String)  # light, fan, door, fridge
     state = Column(Boolean, default=True)
+
