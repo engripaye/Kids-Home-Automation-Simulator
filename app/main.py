@@ -6,3 +6,9 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Kids Home Automation Simulator")
 
+app.include_router(devices.router)
+
+
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the Kids Home Automation Simulator API!"}
