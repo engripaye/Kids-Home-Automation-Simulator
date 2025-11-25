@@ -16,4 +16,4 @@ def read_root():
 
 @app.get("/devices")
 def read_device():
-    return {"message": "Welcome to the Kids Home Automation Simulator API!"}
+    return {"message": "Welcome to the Kids Home Automation Simulator API Application!"}
