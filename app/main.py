@@ -12,7 +12,7 @@ app = FastAPI(title="Kids Home Automation Simulator")
 app.include_router(devices.router)
 
 # Serve frontend folder as static files
-app.mount("/frontend", StaticFiles(directory="frontend"), name="frontend")
+app.mount("/static", StaticFiles(directory="frontend"), name="static")
 
 
 @app.get("/")
