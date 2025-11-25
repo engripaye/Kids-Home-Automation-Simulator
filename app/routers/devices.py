@@ -14,15 +14,15 @@ def get_db():
 
 
 @router.get("/")
-def read_devices(db: Session = Depends(get_db())):
+def read_devices(db: Session = Depends(get_db)):
     return crud.get_devices(db)
 
 
 @router.post("/")
-def add_device(device: schemas.DeviceCreate, db: Session = Depends(get_db())):
+def add_device(device: schemas.DeviceCreate, db: Session = Depends(get_db)):
     return crud.create_device(db, device)
 
 
 @router.post("/{device_id}/toggle")
-def toggle_device(device_id: int, db: Session = Depends(get_db())):
+def toggle_device(device_id: int, db: Session = Depends(get_db)):
     return crud.toggle_device(db, device_id)
