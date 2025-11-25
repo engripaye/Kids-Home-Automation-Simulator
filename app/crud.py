@@ -1,6 +1,5 @@
 from sqlalchemy.orm import Session
-import models
-import schemas
+from app import models, schemas
 
 
 def get_devices(db: Session):
