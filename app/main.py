@@ -17,4 +17,4 @@ app.mount("/static", StaticFiles(directory="frontend"), name="static")
 
 @app.get("/")
 def read_root():
-    return FileResponse(os.path.join("frontend", "index.html"))  # backend get system
+    return FileResponse(os.path.join("frontend", "index.html"))  # backend get system updated
