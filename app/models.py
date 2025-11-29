@@ -7,6 +7,6 @@ class Device(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String, unique=True, index=True)
-    type = Column(String)  # light, fan, door, fridge, calculator
+    type = Column(String)  # light, fan, door, fridge, calculator, gadget
     state = Column(Boolean, default=True)
 
